@@ -4,3 +4,28 @@ body {
   font-family: sans-serif;
   text-align: center;
 }
+
+.NavBar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.NavBar li {
+  display: inline-block;
+  margin: 20px;
+}
+
+.NarBar a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.NavBar a:hover,
+.NavBar a:active,
+.NavBar a.active{
+    color: #fa923f;
+}
