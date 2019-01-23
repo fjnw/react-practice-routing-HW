@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, NavLink, Switch } from 'react-router-dom';
 
 import Courses from './containers/Courses/Courses';
+import Course from './containers/Course/Course';
 import Users from './containers/Users/Users';
 
 class App extends Component {
@@ -22,15 +23,16 @@ class App extends Component {
           <header className="NavBar">
             <nav>
               <ul>
-                <li><NavLink to="/courses">Users</NavLink></li>
-                <li><NavLink to="/users">Courses</NavLink></li>
+                <li><NavLink to="/courses">Courses</NavLink></li>
+                <li><NavLink to="/users">Users</NavLink></li>
               </ul>
             </nav>
           </header>
 
           <Switch>
+            <Route path="/users" component={Users} />
             <Route path="/courses" exact component={Courses} />
-            <Route path="/users" exact component={Users} />
+            <Route path="/courses/:id" component={Course} />
           </Switch>
         </div>
       </BrowserRouter>
